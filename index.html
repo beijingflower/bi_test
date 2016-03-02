@@ -1,57 +1,984 @@
+
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Bi test by beijingflower</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Bi test</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/beijingflower/bi_test" class="btn">View on GitHub</a>
-      <a href="https://github.com/beijingflower/bi_test/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/beijingflower/bi_test/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<title>Wecash_bi</title>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<!-- Bootstrap Core CSS -->
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<!-- MetisMenu CSS -->
+<link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<!-- Timeline CSS -->
+<link href="/dist/css/timeline.css" rel="stylesheet">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<!-- Custom CSS -->
+<link href="/dist/css/sb-admin-2.css" rel="stylesheet">
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<!-- Morris Charts CSS -->
+<link href="/bower_components/morrisjs/morris.css" rel="stylesheet">
 
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<!-- Custom Fonts -->
+<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" media="all" href="/bower_components/bootstrap-daterangepicker-1.3.21/daterangepicker-bs3.css" />
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<link href="/bower_components/bootstrap-daterangepicker-1.3.21/font-awesome.min.css" rel="stylesheet">
+<link href="/bower_components/datatables/media/css/jquery.dataTables.css" rel="stylesheet">
+<!-- link href="/bower_components/TableTools-2.2.4/css/dataTables.tableTools.min.css" rel="stylesheet" -->
+<link href="/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+<link href="/bower_components/select2-4.0.0/dist/css/select2.css" rel="stylesheet">
+<link href="/css/base.css" rel="stylesheet" type="text/css">
+<link href="/bower_components/jqueryUi/jquery-ui.min.css" rel="stylesheet">
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/beijingflower/bi_test">Bi test</a> is maintained by <a href="https://github.com/beijingflower">beijingflower</a>.</span>
+<link rel="shortcut icon" href="/images/wecash.ico"type="image/x-icon" />
+<link href="/dd/dd.css" rel="stylesheet">
+</head> 
+<body class="x-hidden">
+<div id="wrapper">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top nav-bottom" id='bi-nav-top' role="navigation">
+    <div class="navbar-header" id="header"  style="position: fixed;overflow: hidden;top: 0;left: 0; margin-top: 0">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="mobile-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/pages/index.jsp">
+          <div class="logo"></div>
+        </a>
+    </div>
+    <!-- /.navbar-header -->
+	<div class="nav navbar-top-links navbar-right my-nav-top-right">
+		<a href="/user.do?method=logout">退出</a>
+        <a href="/user/resetPasswd.jsp">个人设置</a>
+        <a data-toggle="dropdown" href="#" class="ib-item01">
+            <img src="/images/ren.png"/>
+        </a>
+	</div>
+    <!-- /.navbar-top-links -->
+    <div class="navbar-default sidebar" role="navigation" style="position: fixed;overflow: hidden;top: 0;left: 0;margin-top: 50px">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <!-- li class="sidebar-search">
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                    </div>
+                </li -->
+                <li><a data-ca='link' data-des='整体经营' href="/dd.do?method=index"><i class="fa fa-dashboard fa-fw"></i>整体经营</a></li><li><a data-ca='link' data-des='闪银C端' href="#"><i class="fa menu-icon1 fa-fw"></i>闪银C端<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='仪表盘-C端' href="/dashboard.do?method=queryWhole">仪表盘-C端</a></li><li><a data-ca='link' data-des='出资方概况(上)' href="/ztfx.do?method=czfgk">出资方概况(上)</a></li><li><a data-ca='link' data-des='风险控制' href="/ztfx.do?method=fxkz">风险控制</a></li><li><a data-ca='link' data-des='市场推广' href="/ztfx.do?method=sctg">市场推广</a></li><li><a data-ca='link' data-des='H5导流' href="/ztfx.do?method=h5Flow">H5导流</a></li></ul></li><li><a data-ca='link' data-des='分析工具' href="#"><i class="fa  fa-fw"></i>分析工具<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='预警分析' href="/fxgj.do?method=yjfx">预警分析</a></li></ul></li><li><a data-ca='link' data-des='定制分析' href="#"><i class="fa  fa-fw"></i>定制分析<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='我的定制' href="/diy.do?method=userIndex">我的定制</a></li><li><a data-ca='link' data-des='系统定制' href="/diy.do?method=adminIndex">系统定制</a></li></ul></li><li><a data-ca='link' data-des='系统配置' href="#"><i class="fa  fa-fw"></i>系统配置<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='用户管理' href="/user.do?method=query">用户管理</a></li><li><a data-ca='link' data-des='数据字典配置' href="/biNorm.do?method=query">数据字典配置</a></li><li><a data-ca='link' data-des='权限管理' href="/auth.do?method=query">权限管理</a></li><ul class="nav nav-second-level"><li><a data-ca='link' data-des='修改角色权限' href="/auth.do?method=updateRoleAjax">修改角色权限</a></li></ul><li><a data-ca='link' data-des='报表配置' href="/report.do?method=edit">报表配置</a></li><li><a data-ca='link' data-des='批量刷新' href="/biNormBatchFlush.do?method=query">批量刷新</a></li><li><a data-ca='link' data-des='biContent' href="/biContent.do?method=query">biContent</a></li><li><a data-ca='link' data-des='biDataDay' href="/biDataDay.do?method=query">biDataDay</a></li></ul></li><li><a data-ca='link' data-des='O2O专题' href="#"><i class="fa menu-icono2o fa-fw"></i>O2O专题<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='O2O整体分析' href="/o2o.do?method=ztfx&templetId=113">O2O整体分析</a></li><li><a data-ca='link' data-des='O2O无业务门店' href="/o2o.do?method=noBusinessStore">O2O无业务门店</a></li><li><a data-ca='link' data-des='风险监控-整体' href="/o2o.do?method=ztjk&templetId=122">风险监控-整体</a></li><li><a data-ca='link' data-des='风险监控-门店' href="/o2o.do?method=mdjk&templetId=123">风险监控-门店</a></li><li><a data-ca='link' data-des='风险监控-渠道' href="/o2o.do?method=qdjk">风险监控-渠道</a></li><li><a data-ca='link' data-des='风险监控-区域' href="/o2o.do?method=qyjk">风险监控-区域</a></li><li><a data-ca='link' data-des='O2O实时分析' href="/o2o.do?method=realTime">O2O实时分析</a></li></ul></li><li><a data-ca='link' data-des='资产360' href="#"><i class="fa menu-iconProperty fa-fw"></i>资产360<span class="fa arrow"></span></a><ul class="nav nav-second-level"><li><a data-ca='link' data-des='资产360-整体' href="/property.do?method=save360">资产360-整体</a></li><li><a data-ca='link' data-des='委托方分析' href="/property.do?method=principal">委托方分析</a></li></ul></li>
+				<!--li>
+                    <a href="/pages/index.jsp"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li-->
+                <!--li>
+				    <a href="#"><i class="fa fa-files-o fa-fw"></i>系统配置<span class="fa arrow"></span></a>
+				    <ul class="nav nav-second-level">
+				   		<li>
+				            <a href="/user.do?method=query">用户管理</a>
+				        </li>
+				   		<li>
+				            <a target="_blank" href="/report.do?method=edit">报表配置</a>
+				        </li>
+				        <li>
+				            <a target="_blank" href="/biNorm.do?method=query">数据字典配置</a>
+				        </li>
+				        <li>
+				            <a target="_blank" href="/biContent.do?method=query">biContent</a>
+				        </li>
+				        <li>
+				            <a target="_blank" href="/biDataDay.do?method=query">biDataDay</a>
+				        </li>
+				    </ul>
+				</li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="/pages/flot.html">Flot Charts</a>
+                        </li>
+                        <li>
+                            <a href="/pages/morris.html">Morris.js Charts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/pages/tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                </li>
+                <li>
+                    <a href="/pages/forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="/pages/panels-wells.html">Panels and Wells</a>
+                        </li>
+                        <li>
+                            <a href="/pages/buttons.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="/pages/notifications.html">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="/pages/typography.html">Typography</a>
+                        </li>
+                        <li>
+                            <a href="/pages/icons.html"> Icons</a>
+                        </li>
+                        <li>
+                            <a href="/pages/grid.html">Grid</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">Second Level Item</a>
+                        </li>
+                        <li>
+                            <a href="#">Second Level Item</a>
+                        </li>
+                        <li>
+                            <a href="#">Third Level <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="#">Third Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level Item</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="/pages/blank.html">Blank Page</a>
+                        </li>
+                        <li>
+                            <a href="/pages/login.html">Login Page</a>
+                        </li>
+                    </ul>
+                </li-->
+            </ul>
+        </div>
+        <!-- /<hr />
+-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+<div id="page-wrapper">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="ib-item02 col-xs-12 ">   
+		</div>
+	</div>   
+	<div class="col-xs-6 col-sm-6 col-md-3 bi-row-1">
+		<div class="item01 item01bg">
+			<div class="item01_div">
+				<div class="icon1 icon-base">
+            	</div>
+			</div>
+			<div class="bi-item04" >
+				<span class='startRegisterUserTotal_all_all_day'></span>
+			</div>
+			<div class="bi-item05" >
+			 	总注册用户
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-3 bi-row-1">
+		<div class="item01 bi-item12">
+			<div class="item01_div">
+				<div class="icon2 icon-base">
+            	</div>
+			</div>
+			<div class="bi-item04" >
+				<span class='creditUserTotal_all_all_day'></span>
+			</div>
+			 <div class="bi-item05" >
+			 	总授信用户
+			 </div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-6  col-md-3 bi-row-1">
+		<div class="item01 bi-item13">
+			<div class="item01_div">
+				<div class="icon3 icon-base">
+            	</div>
+			</div>
+			<div class="bi-item04">
+				<span class='extactCashSuccessAmountTotal_all_all_day'></span>
+			</div>
+			<div class="bi-item05">
+				总放款金额
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-3 bi-row-1">
+		<div class="item01 bi-item14">
+		 <div class="item01_div">
+		 	<div class="icon4 icon-base">
+            </div>
+		 </div>
+		<div class="bi-item04">
+			<span class='extactCashSuccessNumTotal_all_all_day'></span>
+		</div>
+		<div class="bi-item05">
+		 总放款笔数
+		</div>
+		</div>
+	</div>
+</div>
+<!--row1 end -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12 box-border">
+			<div class="row row_color">
+				<div class="col-xs-12 col-sm-12 col-md-9 selectIndex">
+					<div class='zhibiao zhibiao_option_keys selected flag' data-key='line11'>注册用户分布 </div>
+	  				<div class='zhibiao'>|</div>
+	  				<div class='zhibiao zhibiao_option_keys' data-key='line12'>授信用户分布</div>
+				</div>
+			</div>
+	 	   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bi-item15">
+		   	<div id="line1" class="bar"></div>  	
+	   	   </div>
+	   	   </div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12 box-border">
+		<div class="row row_color">
+			<div class="col-xs-12 col-sm-12 col-md-9 selectIndex">
+				<div class='zhibiao zhibiao_option_keys selected flag' data-key='line21'>成交金额分布 </div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_option_keys' data-key='line22'>成交笔数分布</div>
+			</div>
+		</div>
+ 	   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bi-item15">
+	   	<div id="line2" class="bar"></div>  	
+   	   </div>
+   	   </div>
+   </div>
+</div>
+<!--row2 end -->    
 
-    </section>
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12 box-border">
+		<div class="row row_color">
+			<div class="col-xs-12 col-sm-12 col-md-3 selectIndex">
+			  	<div class="zhibiao selected">整体转化率</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-9">
+				<div class="col-xs-9 col-sm-9 col-md-10 m_b3">
+  					<select style="width: 100%;" class="chanpinSelect_ld1">
+					<option value=""></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div id="ld1" class="funnel"></div>
+		</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="row" >
+			<div class="col-xs-12 col-sm-6">
+			   <div class="bi-item08 box-border">
+	        	  <div class="totalCreditPassRate" id="totalCurrentApplicationRate"></div>
+	              <div  class="bi-item09">总授信通过率</div>
+	        	</div>  
+			</div>
+			<div class="col-xs-12 col-sm-6">
+         		<div class="bi-item08 box-border">
+        	 		<div class="totalCurrentApplicationRate" ></div>
+             		<div class="bi-item09">总提现申请率</div>
+        		</div>  
+   	 		</div>
+			<div class="col-xs-12">
+           		<div class="col-xs-12 box-border bi-item08">
+        			<div class="totalSuccessRate number13"></div>
+                	<div class="bi-item09">总提现成功率</div>
+        		</div>
+        	</div>
+		</div>
+	</div>
+</div>
+<!--row3 end --> 
+ 
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  	<div class="module_echarts_1 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart1 selected' data-key='startRegisterUser_all_all_day'>注册用户</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart1" multiple="multiple">
+					<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart1" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart1'>按月</span> | <span class='spanday spanday_chart1 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart1 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart1'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart1 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart1'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart1'></div>
+			</div>
+		</div>
+    </div> 
+  </div>
+</div>
+<!--row2 end --> 
 
-  
-  </body>
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  	<div class="module_echarts_2 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart2 selected' data-key='firstCreditUserPersonNum_all_all_day'>申请授信用户数 </div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart2' data-key='creditMoreThanOrEqual100UserPersonNum_all_all_day'>授信通过用户数</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart2' data-key='modelPassRateTotal_all_all_day'>授信通过率</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart2" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart2" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart2'>按月</span> | <span class='spanday spanday_chart2 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart2 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart2'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart2 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart2'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart2'></div>
+			</div>
+		</div>
+    </div> 
+  </div>
+</div>
+<!--row3 end --> 
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  	<div class="module_echarts_3 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart3 selected' data-key='applyExtactCashUser_all_all_day'>申请提现用户数</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart3' data-key='applyExtactCashNum_all_all_day'>申请提现笔数</div>
+  				<!-- <div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart3' data-key='applyExtactCashPersonNumConvertRate_all_all_day'>申请提现率</div> -->
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart3" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart3" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart3'>按月</span> | <span class='spanday spanday_chart3 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart3 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart3'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart3 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart3'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart3'></div>
+			</div>
+		</div>
+    </div> 
+  </div>
+</div>
+<!--row4 end --> 
+
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  	<div class="module_echarts_4 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart4 selected' data-key='extactCashSuccessUser_all_all_day'>提现成功用户数</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart4' data-key='extactCashSuccessNum_all_all_day'>提现成功笔数</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart4' data-key='extactCashSuccessRate_all_all_day'>提现成功率(笔数)</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart4" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart4" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart4'>按月</span> | <span class='spanday spanday_chart4 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart4 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart4'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart4 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart4'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart4'></div>
+			</div>
+		</div>
+    </div> 
+  </div>
+</div>
+<!--row5 end --> 
+
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  	<div class="module_echarts_5 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart5 selected' data-key='applyExtactCashAmount_all_all_day'>申请金额</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart5' data-key='extactCashSuccessAmount_all_all_day'>放款金额</div>
+  				<div class='zhibiao'>|</div>
+  				<!-- <div class='zhibiao zhibiao_chart5' data-key='extactCashSuccessAmountRate_all_all_day'>提现成功率(金额)</div>
+				<div class='zhibiao'>|</div> -->
+  				<div class='zhibiao zhibiao_chart5' data-key='loadAveragePeriod_all_all_day'>平均期数</div>
+				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart5' data-key='loadAverageMoneyRate_all_all_day'>平均利率</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart5" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart5" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart5'>按月</span> | <span class='spanday spanday_chart5 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart5 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart5'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart5 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart5'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart5'></div>
+			</div>
+		</div>
+    </div> 
+  </div>
+</div>
+<!--row6 end --> 
+
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-5 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12 row_color">
+		<div class="row row_margin">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+ 				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart8">
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 quDao">
+ 				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart8">
+					<option value=""></option>
+				</select>
+			</div>
+		</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 bi-item16 box-border3">
+			<div class="icon5 iconbg"></div>
+			<div class="number1 number-fz channelStoreCostAmountTotal storeCostAmountTotal" id='chart8'>0</div>
+			<div class="title"> 在库本息存量 </div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 bi-item16 box-border3">
+			<div class="icon6 iconbg"></div>
+			<div class="number2 number-fz overDueAmountAddFineAndDividendTotal">0</div>
+			<div class="title">到期逾期金额</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 bi-item16 box-border3">
+			<div class="icon7 iconbg"></div>
+			<div class="number3 number-fz channelModelBadDebtRateTotal overDue180DayAmountTotalRate">0</div>
+			<div class="title">逾期>=180天金额占比</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-7 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12 row_color">
+			<div class="row row_margin">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+ 				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart9">
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 quDao">
+ 				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart9">
+					<option value=""></option>
+				</select>
+			</div>
+		</div>
+		<div class="Mbg box-border7">
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon8 iconbg"></div>
+				<div class="number4 number-fz number-p7 channelM0PlusOverDueRate m0PlusOverDueRate" id="chart9">0</div>
+				<div class="title2">M0+</div>
+			</div>
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon9 iconbg"></div>
+				<div class="number5 number-fz number-p7 channelM1PlusOverDueRate m1PlusOverDueRate">0</div>
+				<div class="title2">M1+</div>
+			</div>
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon10 iconbg"></div>
+				<div class="number6 number-fz number-p7 channelM2PlusOverDueRate m2PlusOverDueRate">0</div>
+				<div class="title2">M2+</div>
+			</div>
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon11 iconbg"></div>
+				<div class="number7 number-fz number-p7 channelM3PlusOverDueRate m3PlusOverDueRate">0</div>
+				<div class="title2">M3+</div>
+			</div>
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon12 iconbg"></div>
+				<div class="number8 number-fz number-p7 channelM4PlusOverDueRate m4PlusOverDueRate">0</div>
+				<div class="title2">M4+</div>
+			</div>
+			<div class="Mbg-div col-md-1 col-sm-4 col-xs-4">
+				<div class="icon13 iconbg"></div>
+				<div class="number9 number-fz number-p7 channelM5PlusOverDueRate m5PlusOverDueRate">0</div>
+				<div class="title2">M5+</div>
+			</div>
+			<div class="col-md-1 col-sm-4 col-xs-4">
+				<div class="icon14 iconbg"></div>
+				<div class="number10 number-fz number-p7 channelM6PlusOverDueRate m6PlusOverDueRate">0</div>
+				<div class="title2">M6+</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>	
+	</div>
+</div>
+<!-- row7 end -->
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  	<div class="module_echarts_6 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart6 selected' data-key='m0OverDueRate_all_all_day'>M0</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m1OverDueRate_all_all_day'>M1</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m2OverDueRate_all_all_day'>M2</div>
+				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m3OverDueRate_all_all_day'>M3</div>
+				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m4OverDueRate_all_all_day'>M4</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m5OverDueRate_all_all_day'>M5</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='m6PlusOverDueRate_all_all_day'>M6</div>
+  				<div class='zhibiao'>|</div>
+  				<div class='zhibiao zhibiao_chart6' data-key='overDue180DayAmountTotalRate_all_all_day'>逾期不良率</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart6" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 quDao" >
+  				<select style="width: 100%;" class="qudaoSelect qudaoSelect_chart6" multiple="multiple">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart6'>按月</span> | <span class='spanday spanday_chart6 selected'>按天</span>
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart6 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart6'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_day_chart6 timePlugin_day">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spday_chart6'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="chart_cls" id='chart6'></div>
+			</div>
+		</div>
+    </div> 
+    </div>
+  </div>
+</div>
+<!-- row8 end -->
+
+<div class="row">  
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 module">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  	<div class="module_echarts_7 module_echarts">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p_b5">
+  				<div class='zhibiao zhibiao_chart7 selected' data-key='loanBackAmountRate_all_all_day'>应收回收率</div>
+			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5">
+  				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart7">
+				<option value=""></option>
+				</select>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 p_b5 dayormonth">
+  				<span class='spanmonth spanmonth_chart7'>按月</span> <!-- | <span class='spanday spanday_chart7 selected'>按天</span> -->
+			</div>
+		  	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 p_b5 timePlugin timePlugin_month_chart7 timePlugin_month">
+				<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+				<span class='spmonth_chart7'></span> <b class="caret"></b>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="tableborder box-border">
+				   <table class="table" id="chart7"></table>
+				</div>
+			</div>
+		</div>
+    </div> 
+  </div>
+  </div>
+</div>
+<!-- row9 end -->
+<div class="row_padding">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5" style="background-color: #fff">
+		<div class='zhibiao zhibiao_chart15 selected' data-key='registerUserPersonNumMap_all_all_day'>注册用户地域分布</div>
+		<div class='zhibiao'>|</div>
+		<div class='zhibiao zhibiao_chart15' data-key='extactCashSuccessPersonNumMap_all_all_day'>提现用户地域分布</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p_b5" style="background-color: #fff">
+		<div style="margin-top: 5px;">
+			<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart15">
+				<option value=""></option>
+			</select>
+		</div>
+	</div>
+</div>
+ 	<div class="row_padding">
+  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:rgb(27, 27, 27);" id="chart15-title">
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="color:#fff;text-align:left;padding: 10px">Top10</div>
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chart15Title-bg" >
+	  		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-0" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-1" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-2" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-3" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-4" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-5" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-6" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-7" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-8" ></div>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 chart15-title chart15-title-9" ></div>
+		</div>
+  	</div>
+ 	</div>
+ 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div id="chart15" class="map"></div>
+</div>
+<!-- row10 end -->
+
+
+
+
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="col-xs-12 col-sm-12 col-md-12 box-border">
+			<div class="row row_color">
+				<div class="col-xs-12 col-sm-12 col-md-7 selectIndex">
+				  	<div class="zhibiao zhibiao_chart10 selected" data-key='startRegisterUserPersonNumTotalSexPer_all_all_day'>注册用户性别分布</div>
+					<div class="zhibiao">|</div>
+					<div class="zhibiao zhibiao_chart10" data-key='extactCashSuccessPersonNumTotalSexPer_all_all_day'>提现用户性别分布</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-5 m_b3">
+ 					<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart10">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="bi-item23 col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+     			<p class="phead phead-base"></p>
+     			<p class="number11 number-fz malePer" id="chart10">0</p>
+	   		</div>
+	    	<div class="bi-item23 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	     		<p class="phead2 phead-base"></p>
+	     		<p class="number12 number-fz femalePer">0</p>
+	   		</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 box-border bi-item15">
+			<div class="row row_color">
+				<div class="col-xs-12 col-sm-12 col-md-7 selectIndex">
+				  	<div class="zhibiao zhibiao_chart11 selected" data-key='startRegisterUserPersonNumTotalCustomerGroupPer_all_all_day'>注册用户职业分布</div>
+					<div class="zhibiao">|</div>
+					<div class="zhibiao zhibiao_chart11" data-key='extactCashSuccessPersonNumTotalCustomerGroupPer_all_all_day'>提现用户职业分布</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-5 m_b3">
+ 					<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart11">
+						<option value=""></option>
+					</select>
+				</div>
+			 </div>
+			 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="bar" id='chart11'></div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="col-xs-12 col-sm-12 col-md-7" style="background-color: #D8E0E4; padding: 10px;">
+				<div class='zhibiao zhibiao_chart12 selected' data-key='startRegisterUserPersonNumTotalAgePer_all_all_day'>注册用户年龄分布 </div>
+				<div class='zhibiao'>|</div>
+				<div class='zhibiao zhibiao_chart12' data-key='extactCashSuccessPersonNumTotalAgePer_all_all_day'>提现用户年龄分布</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-5" style="background-color: #D8E0E4; padding: 11px;">
+				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart12">
+					<option value=""></option>
+				</select>
+			</div> 
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div id="chart12" class="layBar" style="padding: 60px;"></div>
+	 	</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div class="box-border col-xs-12 col-sm-12 col-md-12">
+			<div class="row row_color">
+				<div class="col-xs-12 col-sm-12 col-md-8 selectIndex">
+				  	<div class="zhibiao zhibiao_chart13 selected" data-key='startRegisterUserPersonNumTotalAuthItemPer_all_all_day'>注册用户授权项分布</div>
+					<div class="zhibiao">|</div>
+					<div class="zhibiao zhibiao_chart13" data-key = 'extactCashSuccessPersonNumTotalAuthItemPer_all_all_day'>提现用户授权项分布</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 m_b3">
+					<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart13">
+						<option value=""></option>
+					</select>
+				</div>
+			 </div>
+		 	<div class="col-xs-12 col-sm-12 col-md-12">
+		 		<div id="chart13" class="layBar"></div>
+		 	</div>
+	 	</div>
+	 	</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 bi-item15">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="col-xs-12 col-sm-12 col-md-7" style="background-color: #D8E0E4; padding: 10px;">
+				<div class='zhibiao zhibiao_chart14 selected' data-key='startRegisterUserPersonNumTotalDegreePer_all_all_day'>注册用户学历分布 </div>
+				<div class='zhibiao'>|</div>
+				<div class='zhibiao zhibiao_chart14' data-key='extactCashSuccessPersonNumTotalDegreePer_all_all_day'>提现用户学历分布</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-5" style="background-color: #D8E0E4; padding: 11px;">
+				<select style="width: 100%;" class="chanpinSelect chanpinSelect_chart14">
+					<option value=""></option>
+				</select>
+			</div> 
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+		<div id="chart14" class="layBar" style="padding: 60px;"></div>
+	 	</div>
+	</div>
+</div>
+<!-- row11 end -->
+</div>
+<!-- /#page-wrapper -->
+</div>
+
+<!-- jQuery -->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- JQueryUI -->
+<script src="/bower_components/jqueryUi/jquery-ui.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/dist/js/sb-admin-2.js"></script>
+<script src="/bower_components/bootstrap-daterangepicker-1.3.21/moment.js"></script>
+<script src="/bower_components/bootstrap-daterangepicker-1.3.21/daterangepicker.js"></script>
+<script src="/bower_components/datatables/media/js/jquery.dataTables.js"></script>
+<!--导出csv script src="/bower_components/TableTools-2.2.4/js/dataTables.tableTools.js"></script-->
+<script src="/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+<script src="/bower_components/select2-4.0.0/dist/js/select2.js"></script>
+<!-- script src="/bower_components/select2-4.0.0/dist/js/i18n/zh-CN.js"></script -->
+<script src="/bower_components/artTemplate-master/dist/template.js"></script>
+<script src="/bower_components/echarts-2.2.2/build/dist/echarts.js"></script>
+<script src="/js/jquery.json.min.js"></script>
+<script src="/js/bi.js"></script>
+
+<script src="/bower_components/operateLog/operateLog.js"></script>
+<script>
+var userName = "admin";//获取当前用户
+var timeOption = {
+  startDate: moment().subtract(7, 'days'),
+  endDate: moment().subtract(1, 'days'),
+  minDate:'2010',
+  //dateLimit: { days: 180 },
+  showDropdowns: true,
+  showWeekNumbers: true,
+  timePicker: false,
+  timePickerIncrement: 1,
+  timePicker12Hour: true,
+  ranges: {
+     //'今天': [moment(), moment()],
+     //'昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+     '近一周': [moment().subtract(7, 'days'), moment().subtract(1, 'days')],
+     '近两周': [moment().subtract(14, 'days'), moment().subtract(1, 'days')],
+     '近一月': [moment().subtract(1,'month'), moment().subtract(1, 'days')],
+     '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+  },
+  opens: 'left',
+  buttonClasses: ['btn btn-default'],
+  applyClass: 'btn-sm btn-primary',
+  cancelClass: 'btn-sm',
+  format: 'YYYY-MM-DD',
+  separator: ' to ',
+  locale: {
+      applyLabel: '确定',
+      cancelLabel: '取消',
+      fromLabel: '开始时间',
+      toLabel: '结束时间',
+      customRangeLabel: '自定义',
+      daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+      monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+      firstDay: 1
+  }
+};
+var timeCallback = function(start, end, label) {
+    this.element.find('span').html(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+    //时间插件埋点
+    var name = this.element.attr('data-ca');
+    if(name){
+      var detailData = {};
+      detailData.user_name = userName;
+      detailData.page = location.href;
+      detailData.access_time = CA.getNowFormatDate();
+      detailData.begin_date = start.format('YYYY-MM-DD').trim().replace(/-/g,"");
+      detailData.end_date = end.format('YYYY-MM-DD').trim().replace(/-/g,"");
+      detailData.chart = this.element.attr('data-des');
+      if(typeof(detailData)=="undefined" || detailData=="") return;
+      $.ajax({
+        type:"post",
+        url:"https://data.wecash.net/api/WeBIBuriedPoint?",
+        async:true,
+        dataType:"json",
+        data:detailData,
+      })
+    }
+};
+
+
+var monthOption = {
+  startDate: moment().subtract(1, 'month'),
+  endDate: moment().subtract(1, 'month'),
+  minDate:'2010',
+  showDropdowns: true,
+  showWeekNumbers: true,
+  timePicker: false,
+  timePickerIncrement: 1,
+  timePicker12Hour: true,
+  ranges: {
+     '近三月': [moment().subtract(2, 'month').startOf('month'), moment().subtract(0, 'month').endOf('month')],
+     '近半年': [moment().subtract(5, 'month').startOf('month'), moment().subtract(0, 'month').endOf('month')],
+     '近一年': [moment().subtract(11, 'month').startOf('month'), moment().subtract(0, 'month').endOf('month')],
+     '近两年': [moment().subtract(23, 'month').startOf('month'), moment().subtract(0, 'month').endOf('month')]
+  },
+  opens: 'left',
+  buttonClasses: ['btn btn-default'],
+  applyClass: 'btn-sm btn-primary',
+  cancelClass: 'btn-sm',
+  format: 'YYYY-MM',
+  separator: ' to ',
+  locale: {
+      applyLabel: '确定',
+      cancelLabel: '取消',
+      fromLabel: '开始时间',
+      toLabel: '结束时间',
+      customRangeLabel: '自定义',
+      daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+      monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+      firstDay: 1
+  }
+};
+var monthCallback = function(start, end, label) {
+    this.element.find('span').html(start.format('YYYY-MM') + ' / ' + end.format('YYYY-MM'));
+};
+</script>
+<script type="text/javascript">
+	var contextPath = "";//获取当前路径
+</script>
+<script src="/dd/dd.js"></script>
+</body>
 </html>
